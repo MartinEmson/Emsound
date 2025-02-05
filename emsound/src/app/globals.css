@@ -2,24 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body,html {
+  background-color: #fefefe;
+  color: #2f2f2f;
+  height: 100%;
+  width: 100%;
+  font-family: 'CustomFont', sans-serif;
+}
+
+a {
+  color: #2f2f2f;
+}
+
+input, textarea {
+  font-size: 18px;
+  color: #2f2f2f;
+  background-color: transparent;
+  border: 1px solid #2f2f2f;
+  border-radius: 26px;
+  padding: 20px;
+  width: 100%;  
+  
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6d6b6b;
+}
+
+.input-container {
+  width: 300px;
 }
 
 html.lenis, html.lenis body {
@@ -40,4 +68,20 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+
+
+
+
+.scale-on-hover, .scale-on-hover-2 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
+}
+
+.scale-on-hover-2:hover {
+  transform: scale(1.15);
 }

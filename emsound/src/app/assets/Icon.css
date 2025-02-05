@@ -1,0 +1,7 @@
+.svg-background {
+    background-color: #94dbf0a1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 90px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: padding around the SVG */
+    display: inline-block; /* Ensure the background fits the SVG */
+  }

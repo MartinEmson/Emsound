@@ -1,25 +1,68 @@
-import Image from "next/image";
-import Lenis from 'lenis'
+'use client';
+
+import { useState, useEffect } from 'react';
+import { fetchGraphQL } from './lib/graphql';
+import HeroText from './components/HeroText';
+import About from './components/About';
+import ContactForm from './components/ContactForm';
 
 export default function Home() {
+  // const [homeData, setHomeData] = useState(null);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
-  const lenis = new Lenis()
+  // useEffect(() => {
+  //   console.log('Home component mounted, fetching data...');
+  //   fetchGraphQL(`
+  //     query HomePageQuery {
+  //       pages(where: {slug: "home"}) {
+  //         nodes {
+  //           id
+  //           title
+  //           content
+  //         }
+  //       }
+  //       posts(first: 5) {
+  //         nodes {
+  //           id
+  //           title
+  //           excerpt
+  //         }
+  //       }
+  //     }
+  //   `)
+  //     .then(({ data }) => {
+  //       console.log('Data fetched successfully:', data);
+  //       setHomeData(data);
+  //       setIsLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error('Error in Home component:', err);
+  //       setError('Failed to load data. Please try again later.');
+  //       setIsLoading(false);
+  //     });
+  // }, []);
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
+  // if (isLoading) {
+  //   console.log('Rendering loading state...');
+  //   return <div className="h-screen flex justify-center items-center">Loading...</div>;
+  // }
+  
+  // if (error) {
+  //   console.log('Rendering error state:', error);
+  //   return <div className="h-screen flex justify-center items-center text-red-500">{error}</div>;
+  // }
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
+  // console.log('Rendering main content...');
+  // const homePage = homeData.pages.nodes[0];
+  // const recentPosts = homeData.posts.nodes;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-    </main>
+    <section className="flex flex-col min-h-screen">
+    <HeroText/>
+    <About/>
+    <ContactForm />
+    </section>
   );
 }
+
