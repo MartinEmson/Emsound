@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import stock1 from '../assets/stock1.jpg';
 
 export default function About() {
   return (
     <section className="py-12">
       <div className="h-screen flex flex-col justify-center items-center px-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-5/6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg mb-6">
               Emsound mm AB is a leading sound and lighting company based in Sweden, dedicated to delivering exceptional audio-visual experiences for events of all sizes.
@@ -16,13 +17,13 @@ export default function About() {
               From intimate gatherings to large-scale productions, we pride ourselves on our attention to detail, technical expertise, and commitment to exceeding client expectations.
             </p>
           </div>
-          <div className="relative h-96">
+          <div className="relative h-[500px]">
             <Image
-              src="/placeholder.svg"
+              src={stock1}
               alt="Emsound mm AB team"
               fill
               style={{ objectFit: 'cover' }}
-              className="aspect-square flex justify-center items-center rounded-lg shadow-lg"
+              className="aspect-square flex justify-center items-center"
             />
           </div>
         </div>
@@ -30,4 +31,3 @@ export default function About() {
     </section>
   );
 }
-
