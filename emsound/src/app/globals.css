@@ -16,26 +16,27 @@
 }
 
 body,html {
-  background-color: #fefefe;
-  color: #2f2f2f;
+  background-color: #1a1a1a;
+  color: #ffffff;
   height: 100%;
   width: 100%;
   font-family: 'CustomFont', sans-serif;
 }
 
 a {
-  color: #2f2f2f;
+  color: #ffffff;
+
 }
 
 input, textarea {
   font-size: 18px;
-  color: #2f2f2f;
+  color: #ffffff;
   background-color: transparent;
-  border: 1px solid #2f2f2f;
+  border: 1px solid #ffffff;
   border-radius: 26px;
   padding: 20px;
-  width: 100%;  
-  
+  width: 100%;
+
 }
 
 input:focus, textarea:focus {

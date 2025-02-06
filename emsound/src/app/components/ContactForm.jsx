@@ -20,7 +20,7 @@ export default function ContactForm() {
   const { loading, error, data } = useQuery(GET_CONTACT_FORM);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p className='w-full text-center py-12'>Error: {error.message}</p>;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -74,7 +74,7 @@ export default function ContactForm() {
   });
 
   return (
-    <div className="max-w-md mx-auto mt-8">
+    <div className="h-screen w-full flex justify-center items-center mt-8">
       <h2 className="text-2xl font-bold mb-4">{data.contactForm.title}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {formContent}
@@ -91,4 +91,3 @@ export default function ContactForm() {
     </div>
   );
 }
-

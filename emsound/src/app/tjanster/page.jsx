@@ -4,16 +4,21 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Slider from 'react-slick';
+import stock1 from '../assets/stock1.jpg'
+import stock2 from '../assets/stock2.jpg'
+import stock3 from '../assets/stock3.jpg'
+import stock4 from '../assets/stock4.jpg'
+
 
 // Import CSS files for react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const services = [
-  { id: 'ljud', title: 'Ljud', image: '/placeholder.svg' },
-  { id: 'ljus', title: 'Ljus', image: '/placeholder.svg' },
-  { id: 'streaming', title: 'Streaming', image: '/placeholder.svg' },
-  { id: 'konferens', title: 'Konferens', image: '/placeholder.svg' },
+  { id: 'ljud', title: 'Ljud', image: stock1 },
+  { id: 'ljus', title: 'Ljus', image: stock2 },
+  { id: 'streaming', title: 'Streaming', image: stock4 },
+  { id: 'konferens', title: 'Konferens', image: stock3 },
 ];
 
 const NextArrow = ({ onClick }) => (
@@ -80,7 +85,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div key={service.id} className="p-4">
               <Link href={`/tjanster/${service.id}`} className="group block">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden aspect-square flex flex-col">
+                <div className="bg-transparent border-2 border-black overflow-hidden aspect-square flex flex-col">
                   <div className="relative flex-grow">
                     <Image
                       src={service.image}
@@ -90,7 +95,7 @@ export default function ServicesPage() {
                       className='flex justify-center items-center p-6'
                     />
                   </div>
-                  <div className="p-4 bg-white">
+                  <div className="pb-6">
                     <h2 className="text-xl font-semibold text-center group-hover:text-blue-600 transition-colors">
                       {service.title}
                     </h2>
@@ -104,4 +109,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
