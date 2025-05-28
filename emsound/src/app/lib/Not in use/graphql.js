@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL_URL || 'https://test-martinemson.local/graphql';
+const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL_URL || 'https://emsound.local/graphql';
 
 export function fetchGraphQL(query, variables = {}) {
   return fetch(API_URL, {

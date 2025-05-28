@@ -14,6 +14,8 @@ module.exports = {
       },
       fontFamily: {
          grotesk: ["var(--font-grotesk)"],
+         formula: ['var(--font-formulaCR)'],
+         
       }
     },
   },

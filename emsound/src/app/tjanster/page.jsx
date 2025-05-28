@@ -24,7 +24,7 @@ const services = [
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
     aria-label="Next slide"
   >
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,7 +36,7 @@ const NextArrow = ({ onClick }) => (
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
     aria-label="Previous slide"
   >
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,7 +79,7 @@ export default function ServicesPage() {
 
   return (
     <div className="w-5/6 h-full mx-auto py-36">
-      <h1 className="text-4xl font-bold mb-12 text-center">Våra Tjänster</h1>
+      <h1 className="text-3xl font-bold mb-12 text-center">Våra Tjänster</h1>
       <div className="relative px-8">
         <Slider {...settings}>
           {services.map((service) => (

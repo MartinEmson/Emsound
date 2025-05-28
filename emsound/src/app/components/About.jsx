@@ -1,32 +1,45 @@
-import Image from 'next/image';
-import stock1 from '../assets/stock1.jpg';
+import Nexo from "../assets/nexo.svg";
+import Sennheiser from "../assets/sennheiser.svg";
+import Yamaha from "../assets/yamaha.svg";
+import Shure from "../assets/shure.svg";
+import React from "react";
+
 
 export default function About() {
   return (
-    <section className="py-12">
-      <div className="h-screen flex flex-col justify-center items-center px-24">
-        <div className="w-5/6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-lg mb-6">
-              Emsound mm AB is a leading sound and lighting company based in Sweden, dedicated to delivering exceptional audio-visual experiences for events of all sizes.
-            </p>
-            <p className="text-lg mb-6">
-              With over 20 years of industry experience, our team of skilled professionals is passionate about creating immersive environments through cutting-edge technology and creative solutions.
-            </p>
-            <p className="text-lg">
-              From intimate gatherings to large-scale productions, we pride ourselves on our attention to detail, technical expertise, and commitment to exceeding client expectations.
-            </p>
+    <section id="om" className="bg-[#212121] px-6 md:px-12 py-12">
+
+{/* <h1 className='font-formula p-6 text-[6rem] text-white'>Om</h1> */}
+
+      <div className="min-h-screen flex flex-col">
+      <h1 className='font-formula md:text-[6rem] text-[4rem] text-[#fff]'>Om</h1>
+      <div className="flex justify-center items-center">
+        <div className="w-full md:w-4/6 flex flex-col">
+          <p className="md:mt-0 mt-3 md:text-[3rem] text-[2.5rem] text-[#fff]">
+            Emsound drivs av Mats Lindevall och har varit aktivt i mer än 30 år.
+          </p>
+
+          <p className="mt-12 md:text-[3rem] text-[2.5rem] text-[#fff] ">
+            Vi levererar ljudtekniska tjänster och teknik från bl.a Nexo,
+            Yamaha, Shure och Sennheiser.
+          </p>
           </div>
-          <div className="relative h-[500px]">
-            <Image
-              src={stock1}
-              alt="Emsound mm AB team"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="aspect-square flex justify-center items-center"
-            />
-          </div>
-        </div>
+          {/* <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center">
+            <div className="w-64 h-64 flex items-center justify-center">
+              <Nexo className="max-w-full max-h-full" />
+            </div>
+            <div className="w-96 h-64 flex items-center justify-center">
+              <Sennheiser className="max-w-full max-h-full" />
+            </div>
+            <div className="w-64 h-64 flex items-center justify-center">
+              <Yamaha className="max-w-full max-h-full" />
+            </div>
+            <div className="w-64 h-64 flex items-center justify-center">
+              <Shure className="max-w-full max-h-full" />
+            </div>
+        
+        </div> */}
+      </div>
       </div>
     </section>
   );

@@ -3,7 +3,8 @@ import SmoothScroll from "./components/SmoothScroll";
 import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { ApolloWrapper } from "./components/ApolloWrapper";
+import { formulaCR } from "./fonts";
+
 
 export const metadata = {
   title: "Emsound mm AB",
@@ -15,17 +16,18 @@ export const viewport = {
   initialScale: 1,
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
-      <ApolloWrapper>
+      <body className={`${formulaCR.variable} min-h-screen w-full`}>
+      {/* <ApolloWrapper> */}
         <Navbar />
         <SmoothScroll>
-          <main className="min-h-screen w-full">{children}</main>
+          <main className=''>{children}</main>
         </SmoothScroll>
         <Footer />
-        </ApolloWrapper>
+        {/* </ApolloWrapper> */}
       </body>
     </html>
   );

@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <div>
-    <h1 className='text-center p-6 text-3xl'>Kontakt</h1>
+    <h1 className='p-6 text-3xl'>Kontakt</h1>
     <form className='w-full'>
       <div className='flex flex-col justify-center items-center'>
         <div className='input-container pb-4'>

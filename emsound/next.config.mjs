@@ -1,15 +1,20 @@
-// https://nextjs.org/docs/api-reference/next.config.js/introduction
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'localhost',
+        protocol: 'http',
+        hostname: 'emsound.local',
       },
       {
         protocol: 'https',
-        hostname: 'test-martinemson.local',
+        hostname: 'emsound.local',
       },
+      // For development and testing
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      }
     ],
   },
   webpack(config) {
@@ -19,6 +24,14 @@ const nextConfig = {
     });
 
     return config;
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/wp-json/:path*',
+        destination: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/wp-json/:path*`,
+      },
+    ];
   },
 };
 

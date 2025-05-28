@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { fetchGraphQL } from './lib/graphql';
-import HeroText from './components/HeroText';
+import Hero from './components/Hero';
 import About from './components/About';
 import ContactForm from './components/ContactForm';
+import Photos from './components/Photos';
 
 export default function Home() {
   // const [homeData, setHomeData] = useState(null);
@@ -59,8 +59,9 @@ export default function Home() {
 
   return (
     <section className="flex flex-col min-h-screen">
-    <HeroText/>
+    <Hero/>
     <About/>
+    <Photos/>
     <ContactForm />
     </section>
   );

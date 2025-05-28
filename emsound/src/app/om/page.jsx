@@ -7,17 +7,17 @@ export default function AboutPage() {
     <div className="min-h-screen">
       <About />
 
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl text-center font-bold mb-8">Our Mission</h2>
           <p className="text-lg mb-8 w-2/6 mx-auto">
             At Emsound mm AB, our mission is to transform events through the power of sound and light. We strive to create unforgettable experiences that engage, inspire, and leave a lasting impression on audiences.
           </p>
 
-          <h2 className="text-3xl text-center font-bold mb-8">Our Team</h2>
+          {/* <h2 className="text-3xl text-center font-bold mb-8">Our Team</h2> */}
 
           {/* Grid container */}
-          <div className="grid md:grid-cols-3 gap-8 justify-center">
+          {/* <div className="grid md:grid-cols-3 gap-8 justify-center">
             {[
               { name: 'Mats Lindevall', role: 'Grundare', image: headshot },
             ].map((member) => (
@@ -37,12 +37,12 @@ export default function AboutPage() {
                 <p className="text-gray-600">{member.role}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
 
-      <section className="py-16 bg-gray-100">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Our Services</h2>
           <ul className="list-disc list-inside text-lg space-y-4">
